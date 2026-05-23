@@ -178,3 +178,21 @@ h1 {
     padding-top: 20vh;
   }
 }
+.content-section {
+  max-width: 920px;
+  padding: 96px 7vw 0;
+}
+
+.content-section .eyebrow {
+  margin-bottom: 24px;
+}
+
+.content-section h2 {
+  max-width: 760px;
+  margin-bottom: 28px;
+}
+
+.content-section .hero-copy {
+  max-width: 760px;
+  margin-bottom: 22px;
+}
