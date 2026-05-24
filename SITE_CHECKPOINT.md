@@ -13,7 +13,15 @@ Plain static HTML, CSS, and JavaScript site for Reapers of Reality.
 - Shared `script.js`.
 - Shared header, navigation, and footer across all pages.
 - Content pages use one hero section followed by structured `content-section` blocks where applicable.
-- This site remains separate from Sapphire, DES, and AXIS.
+- Keep Sapphire, DES, and AXIS out unless explicitly requested.
+
+## Repository and Deployment
+
+- GitHub repository: `https://github.com/shawnrobinson226-source/reapers-of-reality`
+- GitHub Pages deployment: `https://shawnrobinson226-source.github.io/reapers-of-reality/`
+- Branch: `main`
+- Remote origin: set.
+- GitHub Pages deployment prep: complete.
 
 ## Current Page List
 
@@ -103,35 +111,18 @@ Keep Sapphire, DES, and AXIS out of the Reapers of Reality static site unless ex
 - Page-by-page copy refinement: complete.
 - Final no-change audit: complete.
 - Coming Soon book CTA: complete.
-- Deployment prep: not started.
+- GitHub repository connection: complete.
+- GitHub Pages deployment: live/open.
+- Deployment prep: complete for GitHub Pages.
 
 ## Not Finished
 
-- Deployment prep.
-- Beginner downloadable worksheet: complete.
-- Worksheet links on relevant pages: complete.
 - SEO/meta polish.
 - Domain setup.
 - Analytics.
-- README/deployment instructions.
 - Book publishing.
 - Final book purchase link.
 
 ## Current Next Recommended Phase
 
-Recommended next phase: deployment prep, SEO/meta polish, domain setup, analytics, and README/deployment instructions.
-
-Recommended worksheet sections:
-
-- Pattern Inventory
-- Blade Question
-- Gap
-- Action That Holds
-- Weekly Review
-
-Recommended link locations:
-
-- Start Here
-- Practices
-- Field Notes
-- Book
+Recommended next phase: SEO/meta polish, domain setup, analytics, book publishing, and final book purchase link.
