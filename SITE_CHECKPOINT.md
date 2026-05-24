@@ -108,8 +108,8 @@ Keep Sapphire, DES, and AXIS out of the Reapers of Reality static site unless ex
 ## Not Finished
 
 - Deployment prep.
-- Beginner downloadable worksheet.
-- Worksheet links on relevant pages.
+- Beginner downloadable worksheet: complete.
+- Worksheet links on relevant pages: complete.
 - SEO/meta polish.
 - Domain setup.
 - Analytics.
@@ -119,7 +119,7 @@ Keep Sapphire, DES, and AXIS out of the Reapers of Reality static site unless ex
 
 ## Current Next Recommended Phase
 
-Recommended next phase: create the beginner downloadable worksheet, then add worksheet links to the correct pages.
+Recommended next phase: deployment prep, SEO/meta polish, domain setup, analytics, and README/deployment instructions.
 
 Recommended worksheet sections:
 
