@@ -104,13 +104,13 @@
           <h3>The Choice</h3>
           <p><strong>Commit / Decline.</strong></p>
           <p>Do not leave the loop open.</p>
-          <div style="display:flex; gap:1rem; margin-top:1rem; flex-wrap:wrap;">
-            <button id="commit-choice" type="button">Commit</button>
-            <button id="decline-choice" type="button">Decline</button>
+          <div style="display:flex; gap:1rem; margin-top:1rem; flex-wrap:wrap; align-items:center;">
+            <button id="commit-choice" class="button primary" type="button">Commit</button>
+            <button id="decline-choice" class="button secondary" type="button">Decline</button>
           </div>
         </div>
 
-        <div id="one-action-card" class="card" hidden>
+        <div id="one-action-card" class="card" hidden style="display:none;">
           <h3>One Action</h3>
           <p>Name your next move. Seven words or fewer.</p>
           <input id="one-action" placeholder="Example: Publish the page today." style="width:100%; padding:1rem; font-size:1rem;" />
@@ -122,11 +122,13 @@
         <div id="recorded-card" class="card" hidden>
           <h3>Recorded</h3>
           <p id="action-result" hidden>Reality recognized. Pattern interrupted. Action chosen.</p>
+          <button data-reset-check type="button">Reset / Start Over</button>
         </div>
 
         <div id="acknowledged-card" class="card" hidden>
           <h3>Acknowledged</h3>
           <p id="decline-result" hidden>No action selected. The loop remains active.</p>
+          <button data-reset-check type="button">Reset / Start Over</button>
         </div>
       </div>
     </section>
@@ -177,6 +179,7 @@
     const acknowledgedCard = document.getElementById("acknowledged-card");
     const actionResult = document.getElementById("action-result");
     const declineResult = document.getElementById("decline-result");
+    const resetButtons = document.querySelectorAll("[data-reset-check]");
 
     const patterns = [
       {
@@ -221,13 +224,35 @@
       return patterns.find((pattern) => pattern.keywords.some((keyword) => text.includes(keyword))) || defaultPattern;
     }
 
+    function hideOneAction() {
+      oneActionCard.hidden = true;
+      oneActionCard.style.display = "none";
+    }
+
+    function showOneAction() {
+      oneActionCard.hidden = false;
+      oneActionCard.style.display = "block";
+    }
+
+    function resetRealityCheck() {
+      input.value = "";
+      oneAction.value = "";
+      output.hidden = true;
+      hideOneAction();
+      recordedCard.hidden = true;
+      acknowledgedCard.hidden = true;
+      actionResult.hidden = true;
+      declineResult.hidden = true;
+      input.focus();
+    }
+
     button.addEventListener("click", () => {
       const result = classify(input.value);
       patternName.textContent = result.name;
       patternCopy.textContent = result.sees;
       realityCopy.textContent = result.reality;
       interruptionCopy.textContent = result.interruption;
-      oneActionCard.hidden = true;
+      hideOneAction();
       recordedCard.hidden = true;
       acknowledgedCard.hidden = true;
       actionResult.hidden = true;
@@ -237,7 +262,7 @@
     });
 
     commitChoice.addEventListener("click", () => {
-      oneActionCard.hidden = false;
+      showOneAction();
       recordedCard.hidden = true;
       acknowledgedCard.hidden = true;
       actionResult.hidden = true;
@@ -246,7 +271,7 @@
     });
 
     declineChoice.addEventListener("click", () => {
-      oneActionCard.hidden = true;
+      hideOneAction();
       recordedCard.hidden = true;
       acknowledgedCard.hidden = false;
       actionResult.hidden = true;
@@ -263,6 +288,10 @@
       acknowledgedCard.hidden = true;
       actionResult.hidden = false;
       declineResult.hidden = true;
+    });
+
+    resetButtons.forEach((resetButton) => {
+      resetButton.addEventListener("click", resetRealityCheck);
     });
   </script>
 </body>
