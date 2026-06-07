@@ -29,7 +29,7 @@
       <p class="eyebrow">REAPERS OF REALITY</p>
       <h1>REALITY CHECK</h1>
       <p class="hero-copy">
-        Most people react to the story. Reality begins when you can see the pattern underneath it.
+        Most people react to the story. Reality begins when you can see the loop underneath it.
       </p>
       <div class="hero-actions">
         <a class="button secondary" href="#check">Begin the Check</a>
@@ -78,11 +78,6 @@
     </section>
 
     <section id="reality-output" class="content-section" hidden>
-      <div class="section-heading">
-        <p class="eyebrow">YOUR REALITY CHECK</p>
-        <h2>Do not obey the first story automatically.</h2>
-      </div>
-
       <div class="grid two-column">
         <div class="card">
           <h3>Received</h3>
@@ -90,41 +85,48 @@
         </div>
 
         <div class="card">
-          <h3>The Pattern</h3>
-          <p><strong>Avoidance Loop</strong></p>
-          <p>You may be refining, delaying, or circling the issue instead of letting the work meet reality.</p>
+          <h3>What AXIS Sees</h3>
+          <p><strong id="pattern-name">Avoidance Loop</strong></p>
+          <p id="pattern-copy"></p>
         </div>
 
         <div class="card">
           <h3>Reality Check</h3>
-          <p>The situation is not automatically failure.</p>
-          <p>It may simply be unfinished, untested, or uncomfortable.</p>
-          <p>Those are not the same thing.</p>
+          <p id="reality-copy">The situation is not automatically failure. It may simply be unfinished, untested, or uncomfortable.</p>
         </div>
 
         <div class="card">
           <h3>The Interruption</h3>
-          <p>Refinement can improve the work.</p>
-          <p>It cannot replace exposure.</p>
-          <p>At some point, the work must meet reality.</p>
+          <p id="interruption-copy">Refinement can improve the work. It cannot replace exposure.</p>
         </div>
 
         <div class="card">
           <h3>The Choice</h3>
-          <p><strong>Commit or Decline.</strong></p>
+          <p><strong>Commit / Decline.</strong></p>
           <p>Do not leave the loop open.</p>
+          <div style="display:flex; gap:1rem; margin-top:1rem; flex-wrap:wrap;">
+            <button id="commit-choice" type="button">Commit</button>
+            <button id="decline-choice" type="button">Decline</button>
+          </div>
         </div>
 
-        <div class="card">
+        <div id="one-action-card" class="card" hidden>
           <h3>One Action</h3>
           <p>Name your next move. Seven words or fewer.</p>
           <input id="one-action" placeholder="Example: Publish the page today." style="width:100%; padding:1rem; font-size:1rem;" />
           <div style="display:flex; gap:1rem; margin-top:1rem; flex-wrap:wrap;">
-            <button type="button" onclick="document.getElementById('action-result').hidden = false;">Commit Action</button>
-            <button type="button" onclick="document.getElementById('decline-result').hidden = false;">Decline</button>
+            <button id="commit-action" type="button">Commit Action</button>
           </div>
+        </div>
+
+        <div id="recorded-card" class="card" hidden>
+          <h3>Recorded</h3>
           <p id="action-result" hidden>Reality recognized. Pattern interrupted. Action chosen.</p>
-          <p id="decline-result" hidden>No action selected. The pattern remains active.</p>
+        </div>
+
+        <div id="acknowledged-card" class="card" hidden>
+          <h3>Acknowledged</h3>
+          <p id="decline-result" hidden>No action selected. The loop remains active.</p>
         </div>
       </div>
     </section>
@@ -135,7 +137,7 @@
         <h2>Reality Discernment is the practice of seeing clearly before reacting.</h2>
       </div>
       <p>
-        The work is simple: notice the reaction, identify the pattern, separate fact from story,
+        The work is simple: notice the reaction, identify the loop, separate fact from story,
         interrupt the automatic loop, and choose one concrete action.
       </p>
     </section>
@@ -161,10 +163,106 @@
   <script>
     const button = document.getElementById("reality-button");
     const output = document.getElementById("reality-output");
+    const input = document.getElementById("reality-input");
+    const patternName = document.getElementById("pattern-name");
+    const patternCopy = document.getElementById("pattern-copy");
+    const realityCopy = document.getElementById("reality-copy");
+    const interruptionCopy = document.getElementById("interruption-copy");
+    const commitChoice = document.getElementById("commit-choice");
+    const declineChoice = document.getElementById("decline-choice");
+    const oneActionCard = document.getElementById("one-action-card");
+    const oneAction = document.getElementById("one-action");
+    const commitAction = document.getElementById("commit-action");
+    const recordedCard = document.getElementById("recorded-card");
+    const acknowledgedCard = document.getElementById("acknowledged-card");
+    const actionResult = document.getElementById("action-result");
+    const declineResult = document.getElementById("decline-result");
+
+    const patterns = [
+      {
+        keywords: ["delay", "waiting", "not ready", "perfect", "fixing", "polish", "unfinished"],
+        name: "Avoidance Loop",
+        sees: "You may be refining, delaying, or circling the work instead of letting it meet reality.",
+        reality: "The situation is not automatically failure. It may simply be unfinished, untested, or uncomfortable.",
+        interruption: "Refinement can improve the work. It cannot replace exposure."
+      },
+      {
+        keywords: ["angry", "mad", "fight", "argument", "reacted"],
+        name: "Reaction Loop",
+        sees: "You may be obeying the first emotional surge instead of seeing the situation clearly.",
+        reality: "The feeling is real. The story attached to it may not be complete.",
+        interruption: "A reaction can feel like truth before it has been tested."
+      },
+      {
+        keywords: ["overthink", "confused", "stuck", "don't know"],
+        name: "Analysis Loop",
+        sees: "You may be trying to think your way into certainty before taking the next clean step.",
+        reality: "More thought is not always more clarity. Sometimes clarity arrives after contact with reality.",
+        interruption: "Understanding must eventually become movement."
+      },
+      {
+        keywords: ["prove", "approval", "seen", "validated"],
+        name: "Validation Loop",
+        sees: "You may be waiting for outside confirmation before trusting the action you already know is next.",
+        reality: "Approval can inform you. It cannot authorize your life for you.",
+        interruption: "Do not hand your authorship to an audience."
+      }
+    ];
+
+    const defaultPattern = {
+      name: "Distortion Loop",
+      sees: "You may be inside a story that feels complete but has not been separated from reality yet.",
+      reality: "Something happened. What it means still needs to be examined.",
+      interruption: "Do not obey the first story automatically."
+    };
+
+    function classify(value) {
+      const text = value.toLowerCase();
+      return patterns.find((pattern) => pattern.keywords.some((keyword) => text.includes(keyword))) || defaultPattern;
+    }
 
     button.addEventListener("click", () => {
+      const result = classify(input.value);
+      patternName.textContent = result.name;
+      patternCopy.textContent = result.sees;
+      realityCopy.textContent = result.reality;
+      interruptionCopy.textContent = result.interruption;
+      oneActionCard.hidden = true;
+      recordedCard.hidden = true;
+      acknowledgedCard.hidden = true;
+      actionResult.hidden = true;
+      declineResult.hidden = true;
       output.hidden = false;
       output.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+
+    commitChoice.addEventListener("click", () => {
+      oneActionCard.hidden = false;
+      recordedCard.hidden = true;
+      acknowledgedCard.hidden = true;
+      actionResult.hidden = true;
+      declineResult.hidden = true;
+      oneAction.focus();
+    });
+
+    declineChoice.addEventListener("click", () => {
+      oneActionCard.hidden = true;
+      recordedCard.hidden = true;
+      acknowledgedCard.hidden = false;
+      actionResult.hidden = true;
+      declineResult.hidden = false;
+    });
+
+    commitAction.addEventListener("click", () => {
+      if (!oneAction.value.trim()) {
+        oneAction.focus();
+        return;
+      }
+
+      recordedCard.hidden = false;
+      acknowledgedCard.hidden = true;
+      actionResult.hidden = false;
+      declineResult.hidden = true;
     });
   </script>
 </body>
