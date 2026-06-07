@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reality Check | Reapers of Reality</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-mark" href="index.html">REAPERS OF REALITY</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="book.html">Book</a>
+      <a href="start-here.html">Start Here</a>
+      <a href="reality-check.html">Reality Check</a>
+      <a href="the-way.html">The Way</a>
+      <a href="tools.html">Tools</a>
+      <a href="code.html">Code</a>
+      <a href="practices.html">Practices</a>
+      <a href="field-notes.html">Field Notes</a>
+      <a href="ecosystem.html">Ecosystem</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">REAPERS OF REALITY</p>
+      <h1>REALITY CHECK</h1>
+      <p class="hero-copy">
+        Most people react to the story. Reality begins when you can see the pattern underneath it.
+      </p>
+      <div class="hero-actions">
+        <a class="button secondary" href="#check">Begin the Check</a>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="section-heading">
+        <p class="eyebrow">WHAT THIS DOES</p>
+        <h2>A fast interruption for unclear moments.</h2>
+      </div>
+      <div class="grid three-column">
+        <div class="card">
+          <h3>1. Name the moment</h3>
+          <p>Write what is happening without trying to make it perfect.</p>
+        </div>
+        <div class="card">
+          <h3>2. Separate reality from story</h3>
+          <p>The goal is not comfort. The goal is clearer contact with what is true.</p>
+        </div>
+        <div class="card">
+          <h3>3. Choose one move</h3>
+          <p>Clarity is not complete until it creates action.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="check" class="content-section">
+      <div class="section-heading">
+        <p class="eyebrow">BEGIN HERE</p>
+        <h2>What is happening?</h2>
+      </div>
+
+      <div class="card">
+        <textarea
+          id="reality-input"
+          rows="7"
+          placeholder="Describe the situation, reaction, decision, or loop you are facing."
+          style="width:100%; padding:1rem; font-size:1rem;"
+        ></textarea>
+
+        <div class="hero-actions">
+          <button id="reality-button" class="button primary">See Clearly</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="reality-output" class="content-section" hidden>
+      <div class="section-heading">
+        <p class="eyebrow">YOUR REALITY CHECK</p>
+        <h2>Do not obey the first story automatically.</h2>
+      </div>
+
+      <div class="grid two-column">
+        <div class="card">
+          <h3>Received</h3>
+          <p>I hear the pressure in this.</p>
+          <p>You are carrying more than the task itself right now.</p>
+        </div>
+
+        <div class="card">
+          <h3>The Pattern</h3>
+          <p><strong>Avoidance Loop</strong></p>
+          <p>You may be refining, delaying, or circling the issue instead of letting the work meet reality.</p>
+        </div>
+
+        <div class="card">
+          <h3>Reality Check</h3>
+          <p>The situation is not automatically failure.</p>
+          <p>It may simply be unfinished, untested, or uncomfortable.</p>
+          <p>Those are not the same thing.</p>
+        </div>
+
+        <div class="card">
+          <h3>The Interruption</h3>
+          <p>Refinement can improve the work.</p>
+          <p>It cannot replace exposure.</p>
+          <p>At some point, the work must meet reality.</p>
+        </div>
+
+        <div class="card">
+          <h3>The Choice</h3>
+          <p><strong>Commit or Decline.</strong></p>
+          <p>Do not leave the loop open.</p>
+        </div>
+
+        <div class="card">
+          <h3>One Action</h3>
+          <p>Name your next move. Seven words or fewer.</p>
+          <input id="one-action" placeholder="Example: Publish the page today." style="width:100%; padding:1rem; font-size:1rem;" />
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="section-heading">
+        <p class="eyebrow">THE POINT</p>
+        <h2>Reality Discernment is the practice of seeing clearly before reacting.</h2>
+      </div>
+      <p>
+        The work is simple: notice the reaction, identify the pattern, separate fact from story,
+        interrupt the automatic loop, and choose one concrete action.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="index.html">Home</a>
+      <a href="book.html">Book</a>
+      <a href="start-here.html">Start Here</a>
+      <a href="reality-check.html">Reality Check</a>
+      <a href="the-way.html">The Way</a>
+      <a href="tools.html">Tools</a>
+      <a href="code.html">Code</a>
+      <a href="practices.html">Practices</a>
+      <a href="field-notes.html">Field Notes</a>
+      <a href="ecosystem.html">Ecosystem</a>
+    </nav>
+    <p class="footer-copy">&copy; 2026 Reapers of Reality.</p>
+  </footer>
+
+  <script>
+    const button = document.getElementById("reality-button");
+    const output = document.getElementById("reality-output");
+
+    button.addEventListener("click", () => {
+      output.hidden = false;
+      output.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  </script>
+</body>
+</html>
