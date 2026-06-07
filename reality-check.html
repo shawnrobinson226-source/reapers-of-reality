@@ -119,6 +119,12 @@
           <h3>One Action</h3>
           <p>Name your next move. Seven words or fewer.</p>
           <input id="one-action" placeholder="Example: Publish the page today." style="width:100%; padding:1rem; font-size:1rem;" />
+          <div style="display:flex; gap:1rem; margin-top:1rem; flex-wrap:wrap;">
+            <button type="button" onclick="document.getElementById('action-result').hidden = false;">Commit Action</button>
+            <button type="button" onclick="document.getElementById('decline-result').hidden = false;">Decline</button>
+          </div>
+          <p id="action-result" hidden>Reality recognized. Pattern interrupted. Action chosen.</p>
+          <p id="decline-result" hidden>No action selected. The pattern remains active.</p>
         </div>
       </div>
     </section>
