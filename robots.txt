@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://shawnrobinson226-source.github.io/reapers-of-reality/sitemap.xml
+Sitemap: https://reaperofreality.com/sitemap.xml
