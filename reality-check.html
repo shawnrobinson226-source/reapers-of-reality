@@ -77,7 +77,7 @@
     <section id="reality-output" class="content-section" hidden>
       <div class="grid two-column">
         <div class="card">
-          <h3>Received</h3>
+          <h3>What Happened</h3>
           <p>Something is pressing on you. That pressure is real. What it means is still being examined.</p>
         </div>
 
@@ -88,17 +88,23 @@
         </div>
 
         <div class="card">
-          <h3>Reality Check</h3>
+          <h3>The Pattern Loop</h3>
+          <p><strong>Event → Interpretation → State → Action → Reinforcement</strong></p>
+          <p>The Gap lives between state and action. That is where the old loop can be interrupted.</p>
+        </div>
+
+        <div class="card">
+          <h3>Reality</h3>
           <p id="reality-copy">The situation is not automatically failure. It may simply be unfinished, untested, or uncomfortable.</p>
         </div>
 
         <div class="card">
-          <h3>The Interruption</h3>
+          <h3>The Gap</h3>
           <p id="interruption-copy">Refinement can improve the work. It cannot replace exposure.</p>
         </div>
 
         <div class="card">
-          <h3>The Choice</h3>
+          <h3>Deliberate Choice</h3>
           <p><strong>Commit / Decline.</strong></p>
           <p>Do not leave the loop open.</p>
           <div style="display:flex; gap:1rem; margin-top:1rem; flex-wrap:wrap; align-items:center;">
@@ -108,7 +114,7 @@
         </div>
 
         <div id="one-action-card" class="card" hidden style="display:none;">
-          <h3>One Action</h3>
+          <h3>Next Action</h3>
           <p>Name your next move. Seven words or fewer.</p>
           <input id="one-action" placeholder="Example: Publish the page today." style="width:100%; padding:1rem; font-size:1rem;" />
           <div style="display:flex; gap:1rem; margin-top:1rem; flex-wrap:wrap;">
@@ -117,13 +123,13 @@
         </div>
 
         <div id="recorded-card" class="card" hidden>
-          <h3>Recorded</h3>
-          <p id="action-result" hidden>Reality recognized. Pattern interrupted. Action chosen.</p>
+          <h3>Pattern Interrupted</h3>
+          <p id="action-result" hidden>Reality recognized. Deliberate action selected. The next decision belongs to you.</p>
           <button data-reset-check type="button">Reset / Start Over</button>
         </div>
 
         <div id="acknowledged-card" class="card" hidden>
-          <h3>Acknowledged</h3>
+          <h3>Loop Left Open</h3>
           <p id="decline-result" hidden>No action selected. The loop remains active.</p>
           <button data-reset-check type="button">Reset / Start Over</button>
         </div>
@@ -179,28 +185,28 @@
 
     const patterns = [
       {
-        keywords: ["delay", "waiting", "not ready", "perfect", "fixing", "polish", "unfinished"],
+        keywords: ["delay", "waiting", "not ready", "perfect", "fixing", "polish", "unfinished", "avoid", "avoiding", "later", "procrastinate", "hide", "stall", "not finished", "not good enough"],
         name: "Avoidance Loop",
         sees: "You may be refining, delaying, or circling the work instead of letting it meet reality.",
         reality: "The situation is not automatically failure. It may simply be unfinished, untested, or uncomfortable.",
         interruption: "Refinement can improve the work. It cannot replace exposure."
       },
       {
-        keywords: ["angry", "mad", "fight", "argument", "reacted"],
+        keywords: ["angry", "mad", "fight", "argument", "reacted", "rage", "triggered", "defensive", "snapped", "impulse", "emotional", "hurt", "upset"],
         name: "Reaction Loop",
         sees: "You may be obeying the first emotional surge instead of seeing the situation clearly.",
         reality: "The feeling is real. The story attached to it may not be complete.",
         interruption: "A reaction can feel like truth before it has been tested."
       },
       {
-        keywords: ["overthink", "confused", "stuck", "don't know"],
+        keywords: ["overthink", "confused", "stuck", "don't know", "uncertain", "unsure", "thinking", "analyze", "analysis", "looping", "decision", "what if"],
         name: "Analysis Loop",
         sees: "You may be trying to think your way into certainty before taking the next clean step.",
         reality: "More thought is not always more clarity. Sometimes clarity arrives after contact with reality.",
         interruption: "Understanding must eventually become movement."
       },
       {
-        keywords: ["prove", "approval", "seen", "validated"],
+        keywords: ["prove", "approval", "seen", "validated", "validation", "noticed", "respect", "liked", "accepted", "rejected", "ignored", "belong", "worth"],
         name: "Validation Loop",
         sees: "You may be waiting for outside confirmation before trusting the action you already know is next.",
         reality: "Approval can inform you. It cannot authorize your life for you.",
@@ -292,6 +298,7 @@
   </script>
 </body>
 </html>
+
 
 
 
