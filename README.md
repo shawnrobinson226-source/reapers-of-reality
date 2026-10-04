@@ -64,4 +64,4 @@ This site can be deployed as a static site through GitHub Pages, Netlify, or Ver
 
 ## Current Status
 
-V1 is complete, polished, audited, and ready for deployment prep.
+Deployed via GitHub Pages from `main`; custom domain is in `CNAME`.
