@@ -13,20 +13,38 @@ Static HTML, CSS, and JavaScript.
 - No build step.
 - No install command.
 
-## Main Files
+## Pages
+
+Live pages (10):
 
 - `index.html`
-- `book.html`
+- `reality-check.html`
+- `library.html`
+- `framework.html`
 - `start-here.html`
-- `the-way.html`
 - `tools.html`
-- `code.html`
 - `practices.html`
 - `field-notes.html`
 - `ecosystem.html`
-- `styles.css`
-- `script.js`
-- `SITE_CHECKPOINT.md`
+- `contact.html`
+
+Redirect stubs (3):
+
+- `book.html` -> `library.html#way-of-the-reaper`
+- `code.html` -> `framework.html#the-code`
+- `the-way.html` -> `framework.html`
+
+Shared files: `styles.css`, `script.js`, `sitemap.xml`, `robots.txt`, `CNAME`, `favicon.ico`.
+
+## Library
+
+The library (`library.html`) lists six books: The Way of the Reaper, The Book of Becoming, The Reaper's Field Manual, TRUTHCIPHER, The Reapers Black Book, and The Reaper's Codex.
+
+## Branch Workflow
+
+- GitHub Pages builds from `main`.
+- Changes are made on a separate branch and pushed to that branch; `main` is updated only by merging that branch.
+- The redesign is on branch `site-redesign-2026` and has not been merged into `main`.
 
 ## Assets and Downloads
 
@@ -47,5 +65,3 @@ This site can be deployed as a static site through GitHub Pages, Netlify, or Ver
 ## Current Status
 
 V1 is complete, polished, audited, and ready for deployment prep.
-
-The book purchase link is not live yet, so the `Coming Soon` state should remain on the book page.
