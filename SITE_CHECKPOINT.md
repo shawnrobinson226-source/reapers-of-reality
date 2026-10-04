@@ -25,15 +25,34 @@ Plain static HTML, CSS, and JavaScript site for Reapers of Reality.
 
 ## Current Page List
 
+Live pages (10):
+
 - `index.html`
-- `book.html`
+- `reality-check.html`
+- `library.html`
+- `framework.html`
 - `start-here.html`
-- `the-way.html`
 - `tools.html`
-- `code.html`
 - `practices.html`
 - `field-notes.html`
 - `ecosystem.html`
+- `contact.html`
+
+Redirect stubs (3):
+
+- `book.html` -> `library.html#way-of-the-reaper`
+- `code.html` -> `framework.html#the-code`
+- `the-way.html` -> `framework.html`
+
+## Library
+
+The library (`library.html`) lists six books: The Way of the Reaper, The Book of Becoming, The Reaper's Field Manual, TRUTHCIPHER, The Reapers Black Book, and The Reaper's Codex.
+
+## Branch Workflow
+
+- GitHub Pages builds from `main`.
+- Changes are made on a separate branch and pushed to that branch; `main` is updated only by merging that branch.
+- The redesign is on branch `site-redesign-2026` and has not been merged into `main`.
 
 ## Completed Git Commits
 
@@ -62,23 +81,24 @@ Plain static HTML, CSS, and JavaScript site for Reapers of Reality.
 ## Completed Page Content Status
 
 - Home: unique title, hero copy, shared nav, footer, and corrected local links.
-- Book: showcase page added with Coming Soon CTA until the final purchase link exists.
 - Start Here: structured introductory sections for what the work is, who it is for, what a Reaper is, and what the path requires.
-- The Way: six-stage Reaper path added and refined.
-- Tools: six locked Reaper tools added and refined.
-- Code: seven core Reapers of Reality laws added and refined.
+- Tools: The Scythe, The Eight Ball, The Crystal Ball, The Hourglass, 11:11, Thirteen, The Flame.
+- Seven Laws live on `framework.html`: Truth Over Comfort, Execution Over Dreams, Growth Through Death, Sacrifice for Sovereignty, Shadow Into Strength, Pain as Purpose, Silence as Strategy. `code.html` redirects to `framework.html#the-code`.
 - Practices: seven practical exercises added and refined.
 - Field Notes: observation, evidence, drift, correction, and review sections added and refined.
 - Ecosystem: brand-level ecosystem structure added without technical-system framing.
 
-## Locked V1 Tools
+## Tools
 
-- Scythe / Sickle
-- Hourglass
-- 8-Ball
-- Crystal Ball
-- Mirror
-- Blood Signature
+Headings on `tools.html`, in page order:
+
+- The Scythe
+- The Eight Ball
+- The Crystal Ball
+- The Hourglass
+- 11:11
+- Thirteen
+- The Flame
 
 ## Audit Result Summary
 
@@ -95,7 +115,6 @@ Latest audit result: PASS.
 - No duplicate IDs or duplicate section headings found.
 - Section tags and document structure are balanced.
 - `styles.css` and `script.js` are appropriate for the current static site.
-- Buy the Book placeholder was replaced with Coming Soon.
 
 ## Current Rule
 
@@ -107,10 +126,8 @@ Keep Sapphire, DES, and AXIS out of the Reapers of Reality static site unless ex
 - Main content pages: complete.
 - Visual polish: complete.
 - Footer: complete.
-- Book showcase page: complete.
 - Page-by-page copy refinement: complete.
 - Final no-change audit: complete.
-- Coming Soon book CTA: complete.
 - GitHub repository connection: complete.
 - GitHub Pages deployment: live/open.
 - Deployment prep: complete for GitHub Pages.
@@ -120,9 +137,3 @@ Keep Sapphire, DES, and AXIS out of the Reapers of Reality static site unless ex
 - SEO/meta polish.
 - Domain setup.
 - Analytics.
-- Book publishing.
-- Final book purchase link.
-
-## Current Next Recommended Phase
-
-Recommended next phase: SEO/meta polish, domain setup, analytics, book publishing, and final book purchase link.
