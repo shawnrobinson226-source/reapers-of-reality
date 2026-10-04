@@ -4,14 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Reality Check | Reapers of Reality</title>
+    <meta name="description" content="Reality Check: describe a situation, reaction, or decision, see the pattern loop underneath it, and choose one concrete action." />
+  <meta property="og:title" content="Reality Check | Reapers of Reality" />
+  <meta property="og:description" content="Reality Check: describe a situation, reaction, or decision, see the pattern loop underneath it, and choose one concrete action." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://reaperofreality.com/reality-check.html" />
+  <meta property="og:site_name" content="Reapers of Reality" />
+  <meta property="og:image" content="https://reaperofreality.com/assets/brand/og-image.jpg" />
+  <meta name="twitter:title" content="Reality Check | Reapers of Reality" />
+  <meta name="twitter:description" content="Reality Check: describe a situation, reaction, or decision, see the pattern loop underneath it, and choose one concrete action." />
+  <meta name="twitter:image" content="https://reaperofreality.com/assets/brand/og-image.jpg" />
+  <link rel="canonical" href="https://reaperofreality.com/reality-check.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png" />
+  <meta name="theme-color" content="#080808" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
-    <a class="site-mark" href="index.html">REAPERS OF REALITY</a>
+    <a class="brand" href="index.html" aria-label="Reapers of Reality — home">
+      <img class="brand-mark" src="assets/brand/rr-mark-96.png" width="40" height="40" alt="" />
+      <span>REAPERS OF REALITY</span>
+    </a>
+
+    <button class="menu-toggle" aria-label="Open navigation">☰</button>
+
     <nav class="site-nav">
       <a href="index.html">Home</a>
-      <a href="reality-check.html">Reality Check</a>
+      <a href="reality-check.html" aria-current="page">Reality Check</a>
       <a href="library.html">Library</a>
       <a href="framework.html">Framework</a>
       <a href="tools.html">Tools</a>
@@ -149,7 +174,12 @@
   </main>
 
   <footer class="site-footer">
-    <nav class="footer-nav" aria-label="Footer navigation">
+    <div class="footer-inner">
+      <img class="footer-mark" src="assets/brand/rr-mark-192.png" width="64" height="64" alt="" />
+      <p class="footer-brand">Reapers of Reality</p>
+      <p class="footer-line">Reality discernment, disciplined action, and authorship for the patterns that shape a life.</p>
+      <p class="footer-tag">The Pattern Ends Here</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
         <a href="index.html">Home</a>
         <a href="reality-check.html">Reality Check</a>
         <a href="library.html">Library</a>
@@ -161,9 +191,11 @@
         <a href="start-here.html">Start Here</a>
         <a href="ecosystem.html">Ecosystem</a>
       </nav>
-    <p class="footer-copy">&copy; 2026 Reapers of Reality.</p>
+      <p class="footer-copy">&copy; 2026 Reapers of Reality.</p>
+    </div>
   </footer>
 
+  <script src="script.js"></script>
   <script>
     const button = document.getElementById("reality-button");
     const output = document.getElementById("reality-output");

@@ -10,19 +10,32 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://reaperofreality.com/" />
   <meta property="og:site_name" content="Reapers of Reality" />
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Reapers of Reality | Reality Discernment and Pattern Interruption" />
   <meta name="twitter:description" content="Reapers of Reality is a reality discernment framework for reducing distortion, interrupting reactive patterns, and acting from clearer contact with reality." />
+    <meta property="og:image" content="https://reaperofreality.com/assets/brand/og-image.jpg" />
+  <meta name="twitter:image" content="https://reaperofreality.com/assets/brand/og-image.jpg" />
+  <link rel="canonical" href="https://reaperofreality.com/" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png" />
+  <meta name="theme-color" content="#080808" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="index.html">REAPERS OF REALITY</a>
+    <a class="brand" href="index.html" aria-label="Reapers of Reality — home">
+      <img class="brand-mark" src="assets/brand/rr-mark-96.png" width="40" height="40" alt="" />
+      <span>REAPERS OF REALITY</span>
+    </a>
 
     <button class="menu-toggle" aria-label="Open navigation">☰</button>
 
     <nav class="site-nav">
-      <a href="index.html">Home</a>
+      <a href="index.html" aria-current="page">Home</a>
       <a href="reality-check.html">Reality Check</a>
       <a href="library.html">Library</a>
       <a href="framework.html">Framework</a>
@@ -34,22 +47,31 @@
   </header>
 
   <main>
-    <section class="hero">
-      <p class="eyebrow">Recognition → Interruption → Authorship</p>
+    <section class="hero hero-home">
+      <div class="hero-copy-block">
+        <p class="eyebrow">Reality Discernment &middot; Pattern Interruption</p>
 
-      <h1>You Are Not Your Patterns.</h1>
+        <h1>You Are Not Your Patterns.</h1>
 
-      <p class="hero-subline">
-        A behavioral framework for seeing reality more clearly, interrupting automatic reactions, and acting with deliberate intention.
-      </p>
+        <p class="hero-subline">
+          A behavioral framework for seeing reality more clearly, interrupting automatic reactions, and acting with deliberate intention.
+        </p>
 
-      <p class="hero-copy">
-        Every life develops patterns. Some protect us. Others quietly begin shaping how we interpret reality itself. The first step is not changing them. It is learning to see them.
-      </p>
+        <p class="hero-copy">
+          Every life develops patterns. Some protect us. Others quietly begin shaping how we interpret reality itself. The first step is not changing them. It is learning to see them.
+        </p>
 
-      <div class="hero-actions">
-        <a class="button primary" href="reality-check.html">Begin Reality Check</a>
-        <a class="button secondary" href="framework.html">Understand the Framework</a>
+        <div class="hero-actions">
+          <a class="button primary" href="reality-check.html">Begin Reality Check</a>
+          <a class="button secondary" href="framework.html">Understand the Framework</a>
+        </div>
+      </div>
+
+      <div class="hero-logo">
+        <picture>
+          <source type="image/webp" srcset="assets/brand/reapers-logo-800.webp 800w, assets/brand/reapers-logo.webp 1200w" sizes="(max-width: 900px) 80vw, 600px" />
+          <img src="assets/brand/reapers-logo-800.webp" width="800" height="785" alt="Reapers of Reality — The Pattern Ends Here" />
+        </picture>
       </div>
     </section>
 
@@ -127,18 +149,27 @@
         <a class="button secondary" href="library.html">Explore the Library</a>
       </div>
     </section>
-    <section class="content-section">
+    <section class="content-section wide">
       <p class="eyebrow">The Library</p>
 
       <h2 class="hero-subline">
-        Five books. One behavioral framework.
+        Six books. One behavioral framework.
       </h2>
 
       <p class="hero-copy">
-        The Reapers of Reality library explores one philosophy from five different
+        The Reapers of Reality library explores one philosophy from six different
         angles. Together they move from recognizing patterns, to diagnosing what is
         active right now, to rebuilding identity through repeated action.
       </p>
+
+      <ul class="cover-strip">
+        <li><a class="cover-tile" data-book="way-of-the-reaper" href="library.html#way-of-the-reaper"><img src="assets/books/thumbs/way-of-the-reaper.jpg" width="360" height="576" alt="The Way of the Reaper — cover" loading="lazy" /></a></li>
+        <li><a class="cover-tile" data-book="book-of-becoming" href="library.html#book-of-becoming"><img src="assets/books/thumbs/book-of-becoming.jpg" width="360" height="576" alt="The Book of Becoming — cover" loading="lazy" /></a></li>
+        <li><a class="cover-tile" data-book="field-manual" href="library.html#field-manual"><img src="assets/books/thumbs/reapers-field-manual.jpg" width="360" height="576" alt="The Reaper's Field Manual — cover" loading="lazy" /></a></li>
+        <li><a class="cover-tile" data-book="truthcipher" href="library.html#truthcipher"><img src="assets/books/thumbs/truthcipher.jpg" width="360" height="576" alt="TRUTHCIPHER — cover" loading="lazy" /></a></li>
+        <li><a class="cover-tile" data-book="black-book" href="library.html#black-book"><img src="assets/books/thumbs/reapers-black-book.jpg" width="360" height="576" alt="The Reapers Black Book — cover" loading="lazy" /></a></li>
+        <li><a class="cover-tile" data-book="codex" href="library.html#codex"><img src="assets/books/thumbs/reapers-codex.jpg" width="360" height="576" alt="The Reaper's Codex — cover" loading="lazy" /></a></li>
+      </ul>
 
       <div class="hero-actions">
         <a class="button primary" href="library.html">Explore the Library</a>
@@ -148,8 +179,10 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
+      <img class="footer-mark" src="assets/brand/rr-mark-192.png" width="64" height="64" alt="" />
       <p class="footer-brand">Reapers of Reality</p>
       <p class="footer-line">Reality discernment, disciplined action, and authorship for the patterns that shape a life.</p>
+      <p class="footer-tag">The Pattern Ends Here</p>
       <nav class="footer-nav" aria-label="Footer navigation">
         <a href="index.html">Home</a>
         <a href="reality-check.html">Reality Check</a>
